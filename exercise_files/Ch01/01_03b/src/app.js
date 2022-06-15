@@ -21,6 +21,6 @@ getContact(1).then((contact) => {
   contact.birthDate = new Date("12/12/1990");
 });
 
-getContact(2).then((contact) => {
+getContact(2 ).then((contact) => {
   console.log("Contact: ", JSON.stringify(contact));
 });
