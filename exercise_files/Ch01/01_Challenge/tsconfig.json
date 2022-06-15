@@ -1,0 +1,9 @@
+{
+  "compilerOptions": {
+    "outDir": "build",
+    "target": "esnext"
+  },
+  "include": [
+    "**.ts"
+  ]
+}
