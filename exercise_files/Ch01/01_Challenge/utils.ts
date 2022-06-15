@@ -1,4 +1,4 @@
-function formatDate(date) {
+export default function formatDate(date) {
     return date.toLocaleDateString("en-US", {
         dateStyle: "medium"
     })
