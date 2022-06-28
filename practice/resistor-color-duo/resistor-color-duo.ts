@@ -13,6 +13,7 @@ const color: Color = {
   'grey' : 8,
   'white' : 9
 }
+
 let translation = ""
   for (let i = 0; i <= 1; i++) {
     translation += color[colors[i].toLowerCase()]
