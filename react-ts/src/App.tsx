@@ -1,20 +1,25 @@
 import { useState } from 'react'
 import logo from './logo.svg'
 import './App.css'
+import Counter from './components/counter'
+import Resume from './components/resume'
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [count, setCount] = useState<number>(0)
+  const [resume, setResume] = useState<boolean>(false)
+
+  const show = () => {
+    return (!resume)
+      ? <Counter name="Quinn" />
+      : <Resume resume={resume}/>
+  }
 
   return (
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <p>Hello Vite + React!</p>
-        <p>
-          <button type="button" onClick={() => setCount((count) => count + 1)}>
-            count is: {count}
-          </button>
-        </p>
+          <button onClick={() => setResume(!resume)}>Do you want to see my resume?</button>
+          {show()}
         <p>
           Edit <code>App.tsx</code> and save to test HMR updates.
         </p>
