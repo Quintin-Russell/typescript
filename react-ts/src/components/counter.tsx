@@ -6,7 +6,7 @@ interface CounterProps {
 
 type CounterState = number
 
-let Counter: React.FC<CounterProps> = (props: CounterProps) => {
+let Counter: React.FC<CounterProps> = (props) => {
   let [count, setCount] = useState<CounterState>(0)
 
   return (
